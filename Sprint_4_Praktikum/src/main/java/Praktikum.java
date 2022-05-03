@@ -5,5 +5,6 @@ public class Praktikum {
         String name = "Оделий Воркута";
         Account account = new Account(name);
         account.checkNameToEmboss();
+
     }
 }
