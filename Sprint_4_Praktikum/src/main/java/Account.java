@@ -7,11 +7,9 @@ public class Account {
     }
 
     public boolean checkNameToEmboss() {
-
         if (name == null) {
             return false;
         } else return name.matches("(?=.{3,19}$)[a-zA-Zа-яёА-ЯЁ]+\\s[a-zA-Zа-яёА-ЯЁ]+");
-
     }
 
 }

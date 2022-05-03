@@ -13,7 +13,6 @@ public class AccountTest {
         this.name = name;
         this.expectedCheckResult = expectedCheckResult;
     }
-
     @Parameterized.Parameters(name = "{index}: Name ({0})")
     public static Object[][] getColorsData() {
         return new Object[][]{
