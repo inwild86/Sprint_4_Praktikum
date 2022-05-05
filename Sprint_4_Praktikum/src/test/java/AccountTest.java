@@ -18,16 +18,21 @@ public class AccountTest {
                 {"", false},
                 {".", false},
                 {"        ", false},
-                {"  ", false},
                 {"k ", false},
                 {"h f", true},
-                {"gjgjgg gjgjgjgjgjjgjgjgjgjgjgjgjg", false},
-                {" Petr Valiev", false},
+                {"h fd", true},
+                {"gjgjgg gjgjgjgjgjjg", true},//19 символов
+                {"gjgjgg gjgjgjgjgjjgl", false},//20 символов
+                {" Petr Valiev", false},//2 пробела, Имя с пробелом в начале
+                {"Petr Vali ", false},// 2 пробела, Имя с пробелом в конце
+                {" Petr Vali ", false},// Имя с пробелом в конце и в начале
+                {" PetrVali", true}, // 1 пробел в начале
+                {" PetrVali", true},// 1 пробел в конце
                 {"ТимотейШевроле", false},
-                {"Petr Valiev ", false},
                 {"aaaaa aaaaa", true},
                 {"a bvcdggggg", true},
-                {"Petr  Valiev", false},
+                {"Petr   Valiev", false},
+                {null, false},
         };
     }
 
