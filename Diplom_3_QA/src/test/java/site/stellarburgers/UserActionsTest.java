@@ -44,13 +44,13 @@ public class UserActionsTest {
     }
 
     @Test
-    @DisplayName("Exit through the Exit button in your account.")
+    @DisplayName("Exit through the exit button in your account")
     public void userLogout() {
         open(LOGIN_PAGE_URL, LoginPage.class);
         loginPage.login(userData.getEmail(), userData.getPassword());
         mainPage.clickLinkPersonalArea();
         personalArea.clickExitButton();
-        assertTrue(loginPage.CheckEmailLoginInputDisplayed());
+        assertTrue(loginPage.checkEmailLoginInputDisplayed());
     }
 
     @Test
@@ -72,7 +72,7 @@ public class UserActionsTest {
         mainPage.clickLinkPersonalArea();
         personalArea.waitAfterExitButton();
         personalArea.clickConstructorButton();
-        assertTrue(mainPage.CheckCreateOrderButton());
+        assertTrue(mainPage.checkCreateOrderButton());
     }
 
     @Test
@@ -83,6 +83,6 @@ public class UserActionsTest {
         mainPage.clickLinkPersonalArea();
         personalArea.waitAfterExitButton();
         personalArea.clickLogo();
-        assertTrue(mainPage.CheckCreateOrderButton());
+        assertTrue(mainPage.checkCreateOrderButton());
     }
 }

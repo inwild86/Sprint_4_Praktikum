@@ -79,7 +79,7 @@ public class RegisterPage {
         registrationButton.click();
     }
     @Step("Check error message if password isn't corrected")
-    public boolean ErrorMessage(String text) {
+    public boolean errorMessage(String text) {
         errorMessage.shouldBe(visible).shouldHave(exactText(text));
         return true;
     }

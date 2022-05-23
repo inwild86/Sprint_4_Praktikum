@@ -37,7 +37,6 @@ public class LoginUserTest {
 
     @After
     public void tearDown() {
-        userActions.deleteCustomer(token);
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();
     }
@@ -48,7 +47,7 @@ public class LoginUserTest {
         open(MAIN_PAGE_URL, MainPage.class);
         mainPage.clicSignInButton();
         loginPage.login(userData.getEmail(), userData.getPassword());
-        assertTrue(mainPage.CheckCreateOrderButton());
+        assertTrue(mainPage.checkCreateOrderButton());
     }
 
     @Test
@@ -57,7 +56,7 @@ public class LoginUserTest {
         open(MAIN_PAGE_URL, MainPage.class);
         mainPage.clickLinkPersonalArea();
         loginPage.login(userData.getEmail(), userData.getPassword());
-        assertTrue(mainPage.CheckCreateOrderButton());
+        assertTrue(mainPage.checkCreateOrderButton());
     }
 
     @Test
@@ -66,7 +65,7 @@ public class LoginUserTest {
         open(REGISTER_PAGE_URL, RegisterPage.class);
         registerPage.clickLoginPageButtonInBottom();
         loginPage.login(userData.getEmail(), userData.getPassword());
-        assertTrue(mainPage.CheckCreateOrderButton());
+        assertTrue(mainPage.checkCreateOrderButton());
     }
 
     @Test
@@ -75,6 +74,6 @@ public class LoginUserTest {
         open(PASSWORD_RECOVERY_PAGE_URL, PasswordRecoveryPage.class);
         passwordRecoveryPage.clickEntryButton();
         loginPage.login(userData.getEmail(), userData.getPassword());
-        assertTrue(mainPage.CheckCreateOrderButton());
+        assertTrue(mainPage.checkCreateOrderButton());
     }
 }

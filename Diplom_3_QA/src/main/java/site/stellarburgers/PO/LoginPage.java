@@ -1,4 +1,5 @@
 package site.stellarburgers.PO;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
@@ -18,7 +19,7 @@ public class LoginPage {
     @FindBy(how = How.XPATH, using = ".//input[@name='Пароль']")
     public SelenideElement passwordField;
 
-    @FindBy(how = How.XPATH, using =  ".//button[text()='Войти']")
+    @FindBy(how = How.XPATH, using = ".//button[text()='Войти']")
     private SelenideElement entryButton;
 
     @FindBy(how = How.XPATH, using = ".//a[text()='Зарегистрироваться']")
@@ -44,14 +45,16 @@ public class LoginPage {
         titleLogin.shouldBe(visible);
         return true;
     }
+
     @Step("Enter your username and password and log in")
     public void login(String email, String password) {
         setEmail(email);
         setPassword(password);
-      clickEntryButton();
+        clickEntryButton();
     }
+
     @Step("Поле email отображается")
-    public boolean CheckEmailLoginInputDisplayed() {
+    public boolean checkEmailLoginInputDisplayed() {
         entryButton.shouldBe(visible);
         return entryButton.isDisplayed();
     }

@@ -13,6 +13,6 @@ public class PasswordRecoveryPage {
     @Step("Click login button")
     public void clickEntryButton() {
 
-        entryButton.shouldBe(Condition.visible).shouldBe(Condition.visible).click();
+        entryButton.shouldBe(Condition.visible).click();
     }
 }

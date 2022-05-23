@@ -41,6 +41,6 @@ public class RegistrationTest {
     public void newUserRegistrationIncorrectPassword() {
         userData = UserData.getInvalidPasswordRandom();
         registerPage.fillFormRegisterUser(userData);
-        assertTrue(registerPage.ErrorMessage("Некорректный пароль "));
+        assertTrue(registerPage.errorMessage("Некорректный пароль "));
     }
 }
